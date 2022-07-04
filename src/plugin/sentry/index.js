@@ -8,7 +8,7 @@ import router from '@/router'
 if (process.env.NODE_ENV === 'production') {
   Sentry.init({
     Vue,
-    dsn: 'http://9bc9e3878a894a8bbac9516369b77a58@192.168.56.101:9000/2',
+    dsn: 'http://258adb86af5f456389848c3a841eb6aa@192.168.56.101:9000/6',
     integrations: [
       new Integrations.BrowserTracing({
         routingInstrumentation: Sentry.vueRouterInstrumentation(router),

@@ -100,7 +100,7 @@ module.exports = {
           authToken: '0ed492e4ac7048f5a2d55e04039994c8af7a2d8242014c4e978ff21d43f70e21',
           url: 'http://192.168.56.101:9000',
           org: 'sentry',
-          project: 'empty-template',
+          project: 'vue-sentry',
           urlPrefix: '~/',
           include: './dist',
           ignore: ['node_modules']
