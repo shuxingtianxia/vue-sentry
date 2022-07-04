@@ -1,0 +1,26 @@
+.el-menu--collapse {
+  .el-submenu {
+    &>.el-submenu__title {
+      &>span {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        visibility: hidden;
+        display: inline-block;
+      }
+      .el-submenu__icon-arrow {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.vxe-table.size--mini .vxe-body--column.col--ellipsis>.vxe-cell, .vxe-table.size--mini .vxe-footer--column.col--ellipsis>.vxe-cell, .vxe-table.size--mini .vxe-header--column.col--ellipsis>.vxe-cell {
+  max-height: 500px !important;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 10px;
+}

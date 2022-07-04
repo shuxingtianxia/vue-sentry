@@ -1,0 +1,4 @@
+dist/*
+public/static
+node_modules/*
+src/components/TinyMCE/*

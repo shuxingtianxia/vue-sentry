@@ -1,0 +1,35 @@
+# 工作流名称，不设置默认取配置文件名
+name: CI
+
+# 指定触发workflow的条件
+# 指定触发事件时，可以限定分支或者标签
+# 当前是只有master分支上触发push事件时才执行工作流任务
+on:
+  push:
+    branches: 
+      - master
+# 工作流执行的一个或多个任务
+jobs:
+  # 任务名称
+  build-and-deploy:
+    # 任务运行的容器类型（虚拟机环境）
+    runs-on: ubuntu-latest
+    # 任务执行的步骤
+    steps:
+      # 步骤名称
+      - name: Checkout
+        # 使用的操作actions，可以使用公共仓库，本地仓库，别人的仓库的action
+        # 拉取代码
+        uses: actions/checkout@v1
+        
+      - name: Install and Build
+        run: |
+          npm i
+          npm run build
+          cp dist/index.html dist/404.html
+
+      - name: Build and Deploy
+        # 构建发布 Github pages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: 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
